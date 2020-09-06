@@ -15,9 +15,6 @@ const Navbar = () => {
           <NextLink href="/">
             <Link>Home</Link>
           </NextLink>
-          <NextLink href="/about">
-            <Link ml={4}>About</Link>
-          </NextLink>
           <NextLink href="/projects">
             <Link ml={4}>Projects</Link>
           </NextLink>
