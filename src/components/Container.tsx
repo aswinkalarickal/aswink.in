@@ -20,7 +20,7 @@ const Container = ({ title, children }: ContainerProps) => {
       </Head>
 
       <Navbar />
-      <Box as="main" w="100%" maxW={640} mx="auto">
+      <Box as="main" w="100%" maxW={640} mx="auto" px={4}>
         {children}
       </Box>
       <Footer />
