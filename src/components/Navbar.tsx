@@ -17,7 +17,7 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <StickyNav as="header" w="100%" p={4} mb={8} mx="auto">
+    <StickyNav as="header" w="100%" px={4} py={[0, 8]} mx="auto">
       <Flex
         as="nav"
         flexDirection="row"
