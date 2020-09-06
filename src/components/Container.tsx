@@ -3,7 +3,6 @@ import { Box } from '@chakra-ui/core'
 import Head from 'next/head'
 
 import Navbar from './Navbar'
-import Main from './Main'
 import Footer from './Footer'
 
 type ContainerProps = {
@@ -20,11 +19,11 @@ const Container = ({ title, children }: ContainerProps) => {
         </title>
       </Head>
 
-      <Box w="100%" maxW={768} mx="auto" px={4}>
-        <Navbar />
-        <Main>{children}</Main>
-        <Footer />
+      <Navbar />
+      <Box as="main" w="100%" maxW={640} mx="auto">
+        {children}
       </Box>
+      <Footer />
     </>
   )
 }

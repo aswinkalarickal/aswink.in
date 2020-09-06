@@ -1,14 +1,32 @@
 import React from 'react'
 import { Box, Button, Flex, Icon, Link, useColorMode } from '@chakra-ui/core'
 import NextLink from 'next/link'
+import styled from '@emotion/styled'
+
 import Logo from './Logo'
+
+const StickyNav = styled(Flex)`
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: background-color 0.1 ease-in-out;
+`
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <header>
-      <Flex align="center" justify="space-between">
+    <StickyNav as="header" w="100%" p={4} mb={8} mx="auto">
+      <Flex
+        as="nav"
+        flexDirection="row"
+        justifyContent="space-between"
+        alignItems="center"
+        w="100%"
+        maxW={768}
+        mx="auto"
+      >
         <Box>
           {/* Typescript doesn't allow use of custom Icon */}
           {/*<Icon name="logo" size={12} />*/}
@@ -35,7 +53,7 @@ const Navbar = () => {
           </Button>
         </Box>
       </Flex>
-    </header>
+    </StickyNav>
   )
 }
 
