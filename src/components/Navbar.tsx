@@ -3,7 +3,7 @@ import { Box, Button, Flex, Icon, Link, useColorMode } from '@chakra-ui/core'
 import NextLink from 'next/link'
 
 const Navbar = () => {
-  const { toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode()
 
   return (
     <header>
@@ -22,7 +22,7 @@ const Navbar = () => {
             <Link ml={4}>Blog</Link>
           </NextLink>
           <Button ml={4} w={10} h={10} onClick={toggleColorMode}>
-            <Icon name="moon" />
+            <Icon name={colorMode === 'light' ? 'moon' : 'sun'} />
           </Button>
         </Box>
       </Flex>

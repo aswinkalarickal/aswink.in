@@ -3,7 +3,7 @@ import { Box, Link } from '@chakra-ui/core'
 
 const Footer = () => (
   <footer>
-    <Box textAlign="center" fontSize={14} color="gray.500">
+    <Box textAlign="center" fontSize={14} color="gray.500" py={8}>
       <nav>
         <Link>github</Link>
         <Link ml={4}>linkedin</Link>

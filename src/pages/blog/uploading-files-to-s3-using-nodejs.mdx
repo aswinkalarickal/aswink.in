@@ -21,7 +21,7 @@ touch package.json
 ```
 
 Now configure your package.json file:
-```json
+```json:package.json
 {
     "name": "upload-code",
     "version": "0.1.1",
@@ -47,7 +47,7 @@ touch app.js
 ```
 
 Open the file and add the script:
-```js
+```js:app.js
 var fs = require('fs');
 var s3fs = require('s3fs');
 ```
@@ -75,7 +75,7 @@ In order to do that, do this:
 >You can't communicate with a service without its policy attached to your Access Key.
 
 Back to coding. In you *app.js* file, add the following script:
-```js
+```js:app.js
 var s3fsImpl = new s3fs(BUCKET_NAME, {
     accessKeyId: ACCESS_KEY_ID,
     secretAccessKey: SECRET_ACCESS_KEY
@@ -84,7 +84,7 @@ var s3fsImpl = new s3fs(BUCKET_NAME, {
 
 This will enable the request to communicate with S3 using the credential you created.
 
-```js
+```js:app.js
 var dir = '/path/to/local/folder';
 var files = getFiles(dir);
 console.log('fetched ' + files.length + ' files\n');
@@ -105,7 +105,7 @@ function getFiles (dir, _files){
 
 This will fetch all the file paths of the files in the folder into an array *files*. 
 Now to upload these files to S3, add the script:
-```js
+```js:app.js
 saveFile(files, 0);
 function saveFile(files, index) {
 	if(files.length > 0) {
