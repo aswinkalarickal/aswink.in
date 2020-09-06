@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <MDXProvider components={MDXComponents}>
-        <ColorModeProvider>
+        <ColorModeProvider value="light">
           <GlobalStyle>
             <CSSReset />
             <Component {...pageProps} />
