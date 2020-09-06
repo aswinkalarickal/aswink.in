@@ -6,9 +6,9 @@ import {
   Heading,
   Kbd,
   Link,
-  PseudoBox,
   Text,
   Divider,
+  Image,
   useColorMode,
 } from '@chakra-ui/core'
 import NextLink from 'next/link'
@@ -51,11 +51,7 @@ const TData = props => (
 )
 
 const CustomLink = props => {
-  const { colorMode } = useColorMode()
-  const color = {
-    light: 'hsl(331,79%,66%)',
-    dark: 'hsl(331,79%,66%)',
-  }
+  const color = 'hsl(331,79%,66%)'
 
   const href = props.href
   const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
@@ -63,12 +59,12 @@ const CustomLink = props => {
   if (isInternalLink) {
     return (
       <NextLink href={href} passHref>
-        <Link color={color[colorMode]} {...props} />
+        <Link color={color} _focus={{ outline: null }} {...props} />
       </NextLink>
     )
   }
 
-  return <Link color={color[colorMode]} isExternal {...props} />
+  return <Link color={color} _focus={{ outline: null }} isExternal {...props} />
 }
 
 const Quote = props => {
@@ -122,22 +118,22 @@ const DocsHeading = props => (
     <Box pointerEvents="auto">
       {props.children}
       {props.id && (
-        <PseudoBox
+        <Link
           aria-label="anchor"
           as="a"
-          color="blue.500"
+          color="pink.400"
           fontWeight="normal"
           outline="none"
           _focus={{
             opacity: 1,
             boxShadow: 'outline',
           }}
-          opacity="0"
+          opacity={0}
           ml="0.375rem"
           href={`#${props.id}`}
         >
           #
-        </PseudoBox>
+        </Link>
       )}
     </Box>
   </Heading>
@@ -151,6 +147,14 @@ const Hr = () => {
   }
 
   return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />
+}
+
+const CustomImage = props => {
+  return (
+    <Link href={props.src} _focus={{ outline: null }}>
+      <Image {...props} />
+    </Link>
+  )
 }
 
 const MDXComponents = {
@@ -172,6 +176,7 @@ const MDXComponents = {
   ol: props => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
   li: props => <Box as="li" pb={1} {...props} />,
   blockquote: Quote,
+  img: CustomImage,
 }
 
 export { CustomLink }

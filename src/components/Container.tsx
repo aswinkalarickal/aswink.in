@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Box } from '@chakra-ui/core'
 import Head from 'next/head'
-import { JSXElement } from '@babel/types'
 
 import Navbar from './Navbar'
 import Main from './Main'
@@ -9,7 +8,7 @@ import Footer from './Footer'
 
 type ContainerProps = {
   title?: string
-  children: JSXElement
+  children?: ReactNode
 }
 
 const Container = ({ title, children }: ContainerProps) => {

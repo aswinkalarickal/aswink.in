@@ -15,7 +15,7 @@ const BlogPost = (frontMatter: BlogPostFrontMatter) => {
     <ListItem mt={4}>
       <Link _hover={{ textDecoration: 'none' }}>
         <NextLink href={`/blog/${slug}`}>
-          <Heading as="h3" size="md">
+          <Heading as="h3" size="md" display="inline-block">
             {frontMatter.title}
           </Heading>
         </NextLink>

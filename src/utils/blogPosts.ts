@@ -1,7 +1,8 @@
 import { frontMatter as blogPosts } from '../pages/blog/**/*.mdx'
+import { BlogPostFrontMatter } from '../types'
 
 export const getBlogPosts = (size = -1) => {
-  const filteredBlogPosts = blogPosts.sort(
+  const filteredBlogPosts: BlogPostFrontMatter[] = (blogPosts as BlogPostFrontMatter[]).sort(
     (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
   )
   if (size == -1) {

@@ -3,7 +3,6 @@ import { Heading, List } from '@chakra-ui/core'
 
 import Container from '../components/Container'
 import BlogPost from '../components/BlogPost'
-import { BlogPostFrontMatter } from '../types'
 import { getBlogPosts } from '../utils/blogPosts'
 
 const Blog = () => {
@@ -15,7 +14,7 @@ const Blog = () => {
         All posts
       </Heading>
       <List>
-        {filteredBlogPosts.map((frontMatter: BlogPostFrontMatter, index) => (
+        {filteredBlogPosts.map((frontMatter, index) => (
           <BlogPost key={index} {...frontMatter} />
         ))}
       </List>
