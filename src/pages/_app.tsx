@@ -7,10 +7,12 @@ import {
 } from '@chakra-ui/core'
 import { MDXProvider } from '@mdx-js/react'
 import { Global, css } from '@emotion/core'
+import { DefaultSeo } from 'next-seo'
 
 import MDXComponents from '../components/MDXComponents'
 import theme from '../styles/theme'
 import { prismLightTheme, prismDarkTheme } from '../styles/prism'
+import SEO from '../next-seo.config'
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode()
@@ -47,6 +49,7 @@ function MyApp({ Component, pageProps }) {
         <ColorModeProvider value="light">
           <GlobalStyle>
             <CSSReset />
+            <DefaultSeo {...SEO} />
             <Component {...pageProps} />
           </GlobalStyle>
         </ColorModeProvider>

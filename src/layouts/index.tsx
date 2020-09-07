@@ -5,6 +5,7 @@ import { JSXElement } from '@babel/types'
 
 import { BlogPostFrontMatter } from '../types'
 import Container from '../components/Container'
+import BlogSEO from '../components/BlogSEO'
 
 type BlogLayoutProps = {
   frontMatter: BlogPostFrontMatter
@@ -12,8 +13,14 @@ type BlogLayoutProps = {
 }
 
 const BlogLayout = ({ frontMatter, children }: BlogLayoutProps) => {
+  const slug = frontMatter.__resourcePath
+    .replace('blog/', '')
+    .replace('.mdx', '')
+
   return (
     <Container title={frontMatter.title}>
+      <BlogSEO url={`http://aswink.in/blog/${slug}`} {...frontMatter} />
+
       <Heading as="h1" size="xl">
         {frontMatter.title}
       </Heading>
