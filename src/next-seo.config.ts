@@ -14,7 +14,7 @@ export default {
     description,
     images: [
       {
-        url: 'https://www.aswink.in/static/images/logo.png',
+        url: 'https://www.aswink.in/android-chrome-512x512.png',
         width: 512,
         height: 512,
         alt: title,
