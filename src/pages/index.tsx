@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, Heading, Link, List, Text } from '@chakra-ui/core'
+import { Box, Button, Heading, Link, List, Text } from '@chakra-ui/core'
+import NextLink from 'next/link'
 
 import Container from '../components/Container'
 import { getBlogPosts } from '../utils/blogPosts'
@@ -39,6 +40,15 @@ const Index = () => {
           I'm an ardent music and movie lover. At my free time I either listen
           to music or binge-watch.
         </Text>
+      </Box>
+
+      <Box mt={4}>
+        <NextLink
+          href="https://drive.google.com/file/d/0B41Dw2ondPUIUkprZXppRG4wVUE/view?usp=sharing"
+          passHref={true}
+        >
+          <Button rightIcon="arrow-forward">Get my CV</Button>
+        </NextLink>
       </Box>
 
       <Box mt={8}>
