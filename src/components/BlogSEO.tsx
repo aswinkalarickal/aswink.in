@@ -6,7 +6,7 @@ const BlogSEO = ({ url, title, summary, publishedAt, banner }) => {
   const date = new Date(publishedAt).toISOString()
   const imageUrl = banner
     ? `https://aswink.in${banner}`
-    : 'https://www.aswink.in/android-chrome-192x192.png'
+    : 'https://www.aswink.in/android-chrome-512x512.png'
   const featuredImage = {
     url: imageUrl,
     alt: title,
