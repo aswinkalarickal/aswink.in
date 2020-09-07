@@ -36,9 +36,9 @@ const Navbar = () => {
           <NextLink href="/">
             <Link>Home</Link>
           </NextLink>
-          <NextLink href="/projects">
-            <Link ml={4}>Projects</Link>
-          </NextLink>
+          {/*<NextLink href="/projects">*/}
+          {/*  <Link ml={4}>Projects</Link>*/}
+          {/*</NextLink>*/}
           <NextLink href="/blog">
             <Link ml={4}>Blog</Link>
           </NextLink>
