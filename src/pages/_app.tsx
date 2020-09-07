@@ -22,6 +22,11 @@ const GlobalStyle = ({ children }) => {
         styles={css`
           ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
 
+          html {
+            min-width: 360px;
+            scroll-behavior: smooth;
+          }
+
           #__next {
             display: flex;
             flex-direction: column;
