@@ -8,6 +8,7 @@ const prettier = require('prettier')
   const pages = await globby([
     'src/pages/**/*{.tsx,.mdx}',
     '!src/pages/_*.tsx',
+    '!src/pages/404.tsx',
     '!src/pages/api',
   ])
 
