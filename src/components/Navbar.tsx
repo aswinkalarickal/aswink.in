@@ -9,15 +9,28 @@ const StickyNav = styled(Flex)`
   position: sticky;
   z-index: 10;
   top: 0;
-  backdrop-filter: blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
   transition: background-color 0.1 ease-in-out;
 `
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
+  const navBackgroundColor = {
+    light: 'rgba(255, 255, 255, 0.8)',
+    dark: 'rgba(30,31,33, 0.8)',
+  }
+
   return (
-    <StickyNav as="header" w="100%" px={4} py={[0, 8]} mx="auto">
+    <StickyNav
+      as="header"
+      w="100%"
+      px={4}
+      py={[0, 8]}
+      mt={[0, 8]}
+      mx="auto"
+      backgroundColor={navBackgroundColor[colorMode]}
+    >
       <Flex
         as="nav"
         flexDirection="row"
