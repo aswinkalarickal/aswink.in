@@ -12,4 +12,12 @@ module.exports = withMdxEnhanced({
   rehypePlugins: [mdxPrism],
   fileExtensions: ['mdx'],
   usesSrc: true,
-})()
+})({
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      require('./scripts/generate-sitemap')
+    }
+
+    return config
+  },
+})
