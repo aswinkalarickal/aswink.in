@@ -9,8 +9,9 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
+          <meta charSet="UTF-8" />
           <link
             rel="icon"
             type="image/png"

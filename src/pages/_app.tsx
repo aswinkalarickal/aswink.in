@@ -13,6 +13,7 @@ import MDXComponents from '../components/MDXComponents'
 import theme from '../styles/theme'
 import { prismLightTheme, prismDarkTheme } from '../styles/prism'
 import SEO from '../next-seo.config'
+import Head from 'next/head'
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode()
@@ -49,6 +50,12 @@ function MyApp({ Component, pageProps }) {
         <ColorModeProvider value="light">
           <GlobalStyle>
             <CSSReset />
+            <Head>
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+              />
+            </Head>
             <DefaultSeo {...SEO} />
             <Component {...pageProps} />
           </GlobalStyle>

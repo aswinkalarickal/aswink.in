@@ -47,7 +47,9 @@ const Index = () => {
           href="https://drive.google.com/file/d/0B41Dw2ondPUIUkprZXppRG4wVUE/view?usp=sharing"
           passHref={true}
         >
-          <Button rightIcon="arrow-forward">Get my CV</Button>
+          <Button rightIcon="arrow-forward" aria-label="Get CV">
+            Get my CV
+          </Button>
         </NextLink>
       </Box>
 

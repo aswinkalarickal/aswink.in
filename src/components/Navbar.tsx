@@ -48,6 +48,7 @@ const Navbar = () => {
             h={10}
             onClick={toggleColorMode}
             _focus={{ outline: null }}
+            aria-label="Toggle Color Mode"
           >
             <Icon name={colorMode === 'light' ? 'moon' : 'sun'} />
           </Button>
