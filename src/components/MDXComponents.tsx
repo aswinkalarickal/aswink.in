@@ -58,13 +58,20 @@ const CustomLink = props => {
 
   if (isInternalLink) {
     return (
-      <NextLink href={href} passHref>
+      <NextLink href={href} passHref={true}>
         <Link color={color} _focus={{ outline: null }} {...props} />
       </NextLink>
     )
   }
 
-  return <Link color={color} _focus={{ outline: null }} isExternal {...props} />
+  return (
+    <Link
+      color={color}
+      _focus={{ outline: null }}
+      isExternal={true}
+      {...props}
+    />
+  )
 }
 
 const Quote = props => {

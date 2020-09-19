@@ -21,7 +21,7 @@ const Index = () => {
           I'm a Full-Stack Developer based in{' '}
           <Link
             href="https://en.wikipedia.org/wiki/Kochi"
-            isExternal
+            isExternal={true}
             color={linkColor}
           >
             Kochi, IN
