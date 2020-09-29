@@ -1,6 +1,6 @@
 import React from 'react'
 import { Heading, Text, Box } from '@chakra-ui/core'
-import { format } from 'date-fns'
+import format from 'date-fns/format'
 import { JSXElement } from '@babel/types'
 
 import { BlogPostFrontMatter } from '../types'
@@ -25,7 +25,7 @@ const BlogLayout = ({ frontMatter, children }: BlogLayoutProps) => {
         {frontMatter.title}
       </Heading>
       <Text fontSize={14} color="gray.500">
-        Posted on {format(new Date(frontMatter.publishedAt), 'MMM dd, yyyy')}
+        Posted on {format(new Date(frontMatter.publishedAt), 'PPp')}
       </Text>
       <Box mt={4}>{children}</Box>
     </Container>
