@@ -11,6 +11,10 @@ const breakpoints = ['40em', '52em', '64em']
 
 const theme = {
   ...chakraTheme,
+  colors: {
+    ...chakraTheme.colors,
+    darkGray: '#1e1f21',
+  },
   fonts,
   breakpoints,
   icons: {

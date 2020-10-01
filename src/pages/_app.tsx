@@ -4,7 +4,6 @@ import {
   CSSReset,
   ColorModeProvider,
   useColorMode,
-  ITheme,
 } from '@chakra-ui/core'
 import { MDXProvider } from '@mdx-js/react'
 import { Global, css } from '@emotion/core'
@@ -19,7 +18,7 @@ import Head from 'next/head'
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode()
 
-  const config = (theme: ITheme) => ({
+  const config = () => ({
     light: {
       color: theme.colors.gray[700],
       bg: theme.colors.white,
@@ -28,7 +27,7 @@ const GlobalStyle = ({ children }) => {
     },
     dark: {
       color: theme.colors.whiteAlpha[900],
-      bg: '#1e1f21',
+      bg: theme.colors.darkGray,
       borderColor: theme.colors.whiteAlpha[300],
       placeholderColor: theme.colors.whiteAlpha[400],
     },
