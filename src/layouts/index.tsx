@@ -19,7 +19,7 @@ const BlogLayout = ({ frontMatter, children }: BlogLayoutProps) => {
 
   return (
     <Container title={frontMatter.title}>
-      <BlogSEO url={`http://aswink.in/blog/${slug}`} {...frontMatter} />
+      <BlogSEO url={`https://aswink.in/blog/${slug}`} {...frontMatter} />
 
       <Heading as="h1" size="xl">
         {frontMatter.title}
