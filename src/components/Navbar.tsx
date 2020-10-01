@@ -10,7 +10,6 @@ const StickyNav = styled(Flex)`
   z-index: 10;
   top: 0;
   backdrop-filter: blur(5px);
-  transition: background-color 0.1 ease-in-out;
 `
 
 const Navbar = () => {
