@@ -4,6 +4,7 @@ import {
   CSSReset,
   ColorModeProvider,
   useColorMode,
+  ITheme,
 } from '@chakra-ui/core'
 import { MDXProvider } from '@mdx-js/react'
 import { Global, css } from '@emotion/core'
@@ -18,9 +19,24 @@ import Head from 'next/head'
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode()
 
+  const config = (theme: ITheme) => ({
+    light: {
+      color: theme.colors.gray[700],
+      bg: theme.colors.white,
+      borderColor: theme.colors.gray[200],
+      placeholderColor: theme.colors.gray[500],
+    },
+    dark: {
+      color: theme.colors.whiteAlpha[900],
+      bg: '#1e1f21',
+      borderColor: theme.colors.whiteAlpha[300],
+      placeholderColor: theme.colors.whiteAlpha[400],
+    },
+  })
+
   return (
     <>
-      <CSSReset />
+      <CSSReset config={config} />
       <Global
         styles={css`
           ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
@@ -34,7 +50,6 @@ const GlobalStyle = ({ children }) => {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background: ${colorMode === 'light' ? 'white' : '#1e1f21'};
           }
         `}
       />
@@ -49,7 +64,6 @@ function MyApp({ Component, pageProps }) {
       <MDXProvider components={MDXComponents}>
         <ColorModeProvider value="light">
           <GlobalStyle>
-            <CSSReset />
             <Head>
               <meta
                 name="viewport"
