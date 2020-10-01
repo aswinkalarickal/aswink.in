@@ -9,7 +9,7 @@ const StickyNav = styled(Flex)`
   position: sticky;
   z-index: 10;
   top: 0;
-  backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: blur(5px);
   transition: background-color 0.1 ease-in-out;
 `
 
@@ -27,7 +27,6 @@ const Navbar = () => {
       w="100%"
       px={4}
       py={[0, 8]}
-      mt={[0, 8]}
       mx="auto"
       backgroundColor={navBackgroundColor[colorMode]}
     >
