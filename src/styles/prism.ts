@@ -218,8 +218,10 @@ const prismBaseTheme = css`
     border-top-right-radius: ${theme.radii.lg};
     font-size: 0.8rem;
     font-weight: 600;
+    margin-top: 0.5rem;
     margin-bottom: 0;
     width: 100%;
+
     + pre {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
