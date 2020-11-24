@@ -10,7 +10,7 @@ const About = () => {
       <Heading as="h1" size="2xl">
         Hi, I'm Aswin Kalarickal
       </Heading>
-      <Text mt={4}>
+      <Text as="p" mt={4}>
         I'm a Full-Stack Developer based in{' '}
         <Link
           href="https://en.wikipedia.org/wiki/Kochi"
@@ -29,16 +29,15 @@ const About = () => {
         </Link>{' '}
         as Senior Game Developer.
       </Text>
-      <Text mt={4}>
+      <Text as="p" mt={4}>
         I'm an ardent music and movie lover. At my free time I either listen to
         music or binge-watch.
       </Text>
-
       <NextLink
         href="https://drive.google.com/file/d/0B41Dw2ondPUIUkprZXppRG4wVUE/view?usp=sharing"
         passHref={true}
       >
-        <Button mt={4} rightIcon="arrow-forward" aria-label="Get CV">
+        <Button mt={6} rightIcon="arrow-forward" aria-label="Get CV">
           Get my CV
         </Button>
       </NextLink>
