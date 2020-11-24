@@ -5,18 +5,16 @@ import Head from 'next/head'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
-type ContainerProps = {
+type LayoutProps = {
   title?: string
   children?: ReactNode
 }
 
-const Container = ({ title, children }: ContainerProps) => {
+const Layout = ({ title, children }: LayoutProps) => {
   return (
     <>
       <Head>
-        <title>
-          {title ? `${title} | Aswin Kalarickal` : 'Aswin Kalarickal'}
-        </title>
+        <title>{(title ? `${title} | ` : '') + 'Aswin Kalarickal'}</title>
       </Head>
 
       <Navbar />
@@ -28,4 +26,4 @@ const Container = ({ title, children }: ContainerProps) => {
   )
 }
 
-export default Container
+export default Layout

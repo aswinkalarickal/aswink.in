@@ -1,11 +1,11 @@
 import React from 'react'
 import { Box, Image, Text, Link } from '@chakra-ui/core'
 import NextLink from 'next/link'
-import Container from '../components/Container'
+import Layout from '../components/Layout'
 
 const Error = () => {
   return (
-    <Container title="404 Page Not Found">
+    <Layout title="404 Page Not Found">
       <Box textAlign="center">
         <Image src={'/static/images/404.svg'} alt="404" width="100%" />
         <Box mt={8}>
@@ -18,7 +18,7 @@ const Error = () => {
           </Link>
         </Box>
       </Box>
-    </Container>
+    </Layout>
   )
 }
 

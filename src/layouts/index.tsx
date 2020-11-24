@@ -4,7 +4,7 @@ import format from 'date-fns/format'
 import { JSXElement } from '@babel/types'
 
 import { BlogPostFrontMatter } from '../types'
-import Container from '../components/Container'
+import Layout from '../components/Layout'
 import BlogSEO from '../components/BlogSEO'
 
 type BlogLayoutProps = {
@@ -18,7 +18,7 @@ const BlogLayout = ({ frontMatter, children }: BlogLayoutProps) => {
     .replace('.mdx', '')
 
   return (
-    <Container title={frontMatter.title}>
+    <Layout title={frontMatter.title}>
       <BlogSEO url={`https://aswink.in/blog/${slug}`} {...frontMatter} />
 
       <Heading as="h1" size="xl">
@@ -28,7 +28,7 @@ const BlogLayout = ({ frontMatter, children }: BlogLayoutProps) => {
         Posted on {format(new Date(frontMatter.publishedAt), 'PPp')}
       </Text>
       <Box mt={4}>{children}</Box>
-    </Container>
+    </Layout>
   )
 }
 
