@@ -6,6 +6,7 @@ import Container from '../components/Container'
 import { getBlogPosts } from '../utils/blogPosts'
 import { BlogPostFrontMatter } from '../types'
 import BlogPost from '../components/BlogPost'
+import Projects from '../components/Projects'
 
 const Index = () => {
   const linkColor = 'pink.400'
@@ -52,6 +53,8 @@ const Index = () => {
           </Button>
         </NextLink>
       </Box>
+
+      <Projects />
 
       <Box mt={8}>
         <Heading as="h2" size="xl">
