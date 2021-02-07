@@ -15,7 +15,7 @@ const Footer = () => (
         </Link>
       </NextLink>
 
-      <NextLink href="https://instagram.com/aswinkalarickal" passHref={true}>
+      <NextLink href="https://instagram.com/aswin.kalarickal" passHref={true}>
         <Link as="a" ml={4}>
           instagram
         </Link>
