@@ -11,23 +11,23 @@ const About = () => {
         Hi, I'm Aswin Kalarickal
       </Heading>
       <Text as="p" mt={4}>
-        I'm a Full-Stack Developer based in{' '}
+        I'm a Programmer based in{' '}
         <Link
-          href="https://en.wikipedia.org/wiki/Kochi"
+          href="https://en.wikipedia.org/wiki/Abu_Dhabi"
           isExternal={true}
           color={linkColor}
         >
-          Kochi, IN
+          Abu Dhabi, AE
         </Link>
         . I'm into building mobile games and web applications. Currently I work
         at{' '}
         <Link
-          href="https://dynamicnext.com?ref=https://aswink.in"
+          href="https://www.ubisoft.com/"
           color={linkColor}
         >
-          Dynamicnext
+          Ubisoft Abu Dhabi
         </Link>{' '}
-        as Senior Game Developer.
+        as Online Programmer.
       </Text>
       <Text as="p" mt={4}>
         I'm an ardent music and movie lover. At my free time I either listen to
